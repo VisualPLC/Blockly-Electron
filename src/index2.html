@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Blockly con Electron</title>
+        <script src="./node_modules/blockly/blockly_compressed.js"></script>
+        <script src="./node_modules/blockly/blocks_compressed.js"></script>
+        <script src="./node_modules/blockly/javascript_compressed.js"></script>
+        <script src="./node_modules/blockly/msg/en.js"></script>
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+        <div id="blocklyDiv"></div>
+        <div class="game">
+          <div>
+            <div id="inputBox" class="text-input"></div>
+            <div class="button-container">
+              <button id="runBtn" class="button primary"><span>Run</span></button>&nbsp;&nbsp;&nbsp;
+              <button id="resetBtn" class="button secondary"><span>Reset</span></button>
+            </div>
+          </div>
+        </div>
+      
+        <!-- 
+              Resource for tool to create custom blocks:
+              https://blockly-demo.appspot.com/static/demos/blockfactory/index.html 
+          -->
+      
+        <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: flex">
+          <!-- block for bot -->
+          <block type="bot"></block>   
+          
+          <!-- block for dropdown menu -->
+          <block type="dropdown"></block>
+        </xml>
+      
+        <script src="blocks.js"></script>
+      
+      </body>
+
+    </body>
+</html>
